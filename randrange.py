@@ -27,5 +27,5 @@ for x in range(10): # prints 10 times everything under this line
         if my_num % 2 != 0:
          my_column.add(my_num)
     my_list.append(my_column)
-for my_stili in my_list:
-    print(my_stili)
+for my_column in my_list:
+    print(my_column)
