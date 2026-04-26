@@ -2,6 +2,8 @@ from random import seed
 from random import randrange
 from datetime import datetime
 
+my_list = []
+
 for x in range(10): # prints 10 times everything under this line
 
     my_column = set()
@@ -24,4 +26,6 @@ for x in range(10): # prints 10 times everything under this line
         my_num = randrange(40, 50)
         if my_num % 2 != 0:
          my_column.add(my_num)
-    print(my_column)
+    my_list.append(my_column)
+for my_stili in my_list:
+    print(my_stili)
