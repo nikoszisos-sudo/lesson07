@@ -16,5 +16,11 @@ for i in range(2, 101):
     else:
         my_list_primes.append(i)
 my_set_primes = set(my_list_primes)
-print("prime 3 numbers from 0-100 : "+ str(my_set_primes))
-print("prime 3 numbers from 0-100 are : "+ str(len(my_set_primes)) + " numbers")
+print("prime numbers from 0-100 : "+ str(my_set_primes))
+print("prime numbers from 0-100 are : "+ str(len(my_set_primes)) + " numbers")
+
+my_set_even_multiple_3 = str(my_set_even & my_set_multiple_3)
+print("even numbers and multiple 3 from 0-100: "+ str(my_set_even_multiple_3))
+
+my_set_odd_my_set_primes = str(my_set_odd & my_set_primes)
+print("odd numbers and primes from 0-100: "+ str(my_set_odd_my_set_primes))
