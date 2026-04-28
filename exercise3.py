@@ -24,3 +24,9 @@ print("even numbers and multiple 3 from 0-100: "+ str(my_set_even_multiple_3))
 
 my_set_odd_my_set_primes = str(my_set_odd & my_set_primes)
 print("odd numbers and primes from 0-100: "+ str(my_set_odd_my_set_primes))
+
+my_set_primes_not_my_set_odds = str(my_set_primes - my_set_odd)
+print("prime numbers and not odds from 0-100: "+ str(my_set_primes_not_my_set_odds))
+
+my_set_odd_symmetric_my_set_primes = str(my_set_odd ^ my_set_primes)
+print("odd numbers or primes but not odds and primes from 0-100: "+ str(my_set_odd_symmetric_my_set_primes))
