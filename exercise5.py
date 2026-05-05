@@ -1,6 +1,6 @@
 from random import randrange
-kind = {"heart", "diamond", "spade", "club"}
-number = {"ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King"}
+kind = {"Heart", "Diamond", "Spade", "Club"}
+number = {"Ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King"}
 deck = {(k,n) for k in kind for n in number } #(k,n) is tuple (immutable) inside a set (deck)
 print(len(deck))
 print(deck)
@@ -14,11 +14,22 @@ for i in range(5):
     player1.add(my_deck.pop(pos1))  # pop this item from my_deck and add it to player1 set
     pos2 = randrange(0, len(my_deck))
     player2.add(my_deck.pop(pos2))
+
 print(player1)
 print(player2)
 
 
+cnt = 0
+for card in player1:
+    if card[1]=="Ace":
+        cnt += 1
+print("Player1 has " + str(cnt) + " Aces")
 
+cnt = 0
+for card in player2:
+    if card[1]=="Ace":
+        cnt += 1
+print("Player2 has " + str(cnt) + " Aces")
 
 
 
