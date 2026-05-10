@@ -72,17 +72,20 @@ for card in player2: #convert figures into numbers in cards for player2
         player_2_kenta.append(card[1])
 print (sorted(player_2_kenta))
 
+player_1_kenta.sort()
+player_2_kenta.sort()
+
 for i in range(4): #check if 4 cards are in a row for player1
-    if player_1_kenta[i]-player_1_kenta[i+1]==-1:
-        print("Player 1 has straight")
+    if player_1_kenta[i]-player_1_kenta[i+1]!=-1:
+        print("Player 1 doesn't have straight")
         break
 else:
-    print("Player 1 doesn't have straight")
+    print("Player 1 has straight")
 
 for i in range(4): #check if 4 cards are in a row for player2
-    if player_2_kenta[i]-player_2_kenta[i+1]==-1:
-        print("Player 2 has straight")
+    if player_2_kenta[i]-player_2_kenta[i+1]!=-1:
+        print("Player 2 doesn't have straight")
         break
 else:
-    print("Player 2 doesn't have straight")
+    print("Player 2 has straight")
 
