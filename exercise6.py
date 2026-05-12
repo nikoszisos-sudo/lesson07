@@ -17,6 +17,9 @@ for i in range(9):
         player = "X"
     else:
         player = "O"
+
+    print ("Player" + player + "plays")
+
 else:
     print("+---+---+---+")
     print("| " + board[2][0] + " | " + board[2][1] + " | " + board[2][2] + " |")
