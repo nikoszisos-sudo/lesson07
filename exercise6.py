@@ -30,6 +30,7 @@ for i in range(9):
         else:
             board[row][col] = player
             break
+    winner = None
     if (board[0][0] == board[0][1] == board[0][2]) and board[0][0] != " ":
         winner = player
     elif (board[1][0] == board[1][1] == board[1][2]) and board[1][0] != " ":
@@ -44,16 +45,19 @@ for i in range(9):
         winner = player
     elif (board[0][0] == board[1][1] == board[2][2]) and board[0][0] != " ":
         winner = player
-    else:
+    elif (board[0][2] == board[1][1] == board[2][0]) and board[0][2] != " ":
         winner = player
-    print("Player " + winner + " wins!")
 
+    if winner:
+       print("Player " + winner + " wins!")
+       break
 else:
-    print("+---+---+---+")
-    print("| " + board[2][0] + " | " + board[2][1] + " | " + board[2][2] + " |")
-    print("+---+---+---+")
-    print("| " + board[1][0] + " | " + board[1][1] + " | " + board[1][2] + " |")
-    print("+---+---+---+")
-    print("| " + board[0][0] + " | " + board[0][1] + " | " + board[0][2] + " |")
-    print("+---+---+---+")
+    print("  +---+---+---+")  # prints the empty board starting from line 2 then line 1 and then line 0
+    print(str(2) + "| " + board[2][0] + " | " + board[2][1] + " | " + board[2][2] + " |")
+    print("  +---+---+---+")
+    print(str(1) + "| " + board[1][0] + " | " + board[1][1] + " | " + board[1][2] + " |")
+    print("  +---+---+---+")
+    print(str(0) + "| " + board[0][0] + " | " + board[0][1] + " | " + board[0][2] + " |")
+    print("  +---+---+---+")
+    print("    0   1   2")
     print("draw")
